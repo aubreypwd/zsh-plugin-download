@@ -8,7 +8,7 @@ if [[ $(command -v antigen) ]]; then
 fi
 
 if ! [[ -x $(command -v aria2c) ]]; then >&2 echo "Please install aria2 to use download." && return; fi
-if ! [[ -x $(command -v open) ]];   then >&2 echo "download is for macOS only." && return; fi
+if ! [[ -x $(command -v open) ]]; then >&2 echo "download is for macOS only." && return; fi
 
 ###
  # Wrapper or aria2c

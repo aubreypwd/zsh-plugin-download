@@ -7,9 +7,6 @@ if [[ $(command -v antigen) ]]; then
 	require "aria2c" "brew reinstall aria2" "brew" # Automatically install aria2 using homebrew.
 fi
 
-if ! [[ -x $(command -v aria2c) ]]; then >&2 echo "Please install aria2 to use download." && return; fi
-if ! [[ -x $(command -v open) ]]; then >&2 echo "download is for macOS only." && return; fi
-
 ###
  # Wrapper or aria2c
  #
@@ -19,6 +16,8 @@ if ! [[ -x $(command -v open) ]]; then >&2 echo "download is for macOS only." &&
  # @since 1.0.0
  ##
 function download {
+	if ! [[ -x $(command -v aria2c) ]]; then >&2 echo "Please install aria2 to use download." && return; fi
+
 	if [[ -z "$1" ]]; then
 		echo "Please supply a URL."
 		return
@@ -31,5 +30,4 @@ function download {
 	fi
 
 	aria2c -x "$connections" "$1"
-	open ./
 }

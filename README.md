@@ -50,6 +50,11 @@ antigen bundle aubreypwd/zsh-plugin-download
 
 ## Changelog
 
+### 1.0.1
+
+- Do not open via `open` when done
+- Requirement command tests are now in function call
+
 ### 1.0.0
 
 - First version

@@ -20,7 +20,7 @@ Will download the `master.zip` file to your current working directory with `aria
 download "https://github.com/aubreypwd/zsh-plugin-download/archive/master.zip" 12
 ```
 
-...it will download that file using 12 connections. The default connections is 16.
+...it will download that file using `12` connections. The default connections is `16`.
 
 ## Requires
 

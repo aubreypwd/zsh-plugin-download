@@ -19,16 +19,17 @@ if ! [[ -x $(command -v open) ]]; then >&2 echo "download is for macOS only." &&
  # @since 1.0.0
  ##
 function download {
-	if [[ "" = "$1" ]]; then
+	if [[ -z "$1" ]]; then
 		echo "Please supply a URL."
 		return
 	fi
 
 	local connections="$2"
 
-	if [ ""="$2" ]; then
+	if [ -z "$2" ]; then
 		local connections="16"
 	fi
 
-	aria2c -x "$connections" "$1" && open ./
+	aria2c -x "$connections" "$1"
+	open ./
 }

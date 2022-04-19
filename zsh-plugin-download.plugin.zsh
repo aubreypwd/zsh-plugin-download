@@ -1,9 +1,6 @@
 #!/bin/zsh
 
-if [[ $(command -v antigen) ]]; then
-	antigen bundle aubreypwd/zsh-plugin-require@1.0.1
-	antigen apply
-
+if [[ $(command -v require) ]]; then
 	require "aria2c" "brew reinstall aria2" "brew" # Automatically install aria2 using homebrew.
 fi
 

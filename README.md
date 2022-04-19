@@ -26,7 +26,7 @@ download "https://github.com/aubreypwd/zsh-plugin-download/archive/master.zip" 1
 
 - `aria2c`<sup>*</sup>
 
-<sup>*</sup> If using [homebrew](https://brew.sh) on macOS, these will automatically be installed.
+If you have https://github.com/aubreypwd/zsh-plugin-require and homebrew installed, we'll handle installing dependancies automatically.
 
 ## Install
 
@@ -49,6 +49,8 @@ antigen bundle ssh://git@github.com/aubreypwd/zsh-plugin-download
 ---
 
 ## Changelog
+
+Changelog beyond these were moved to Github Releases.
 
 ### 1.0.1
 
